@@ -1,0 +1,97 @@
+.margin {
+    margin: 1em;
+}
+.margin-h {
+    margin: 0 1em;
+}
+.margin-v {
+    margin: 1em 0;
+}
+.padding {
+    padding: 1em;
+}
+.padding-h {
+    padding: 0 1em;
+}
+.padding-v {
+    padding: 1em 0;
+}
+.flex-grow {
+    flex-grow: 1;
+}
+.full-width {
+    width: 100%;
+}
+.full-height {
+    height: 100%;
+}
+.full-size {
+    height: 100%;
+    width: 100%;
+}
+.hor-layout.spacing > .cell:last-child,
+.hor-layout.spacing > .cell:only-child,
+.ver-layout.spacing > .cell:last-child,
+.ver-layout.spacing > .cell:only-child {
+    margin: 0;
+}
+.ver-layout,
+.hor-layout,
+.hor-layout > .cell {
+    display: inline-block;
+}
+.ver-layout.spacing > .cell {
+    margin: 0 0 1em 0;
+}
+.hor-layout.spacing > .cell {
+    margin: 0 1em 0 0;
+}
+.hor-layout.spacing-v > .cell {
+    margin-bottom: 1em;
+}
+.justify-layout {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.justify-layout > .cell  {
+}
+.grid-layout {
+    box-sizing: border-box;
+    display: table;
+    /*    width: 100%;*/ /* добавление гор.маргинов делает width >100% */
+}
+.grid-layout > .row {
+    display: table-row;
+}
+.grid-layout {
+    table-layout: fixed;
+}
+
+.grid-layout > .row > .cell {
+    display: table-cell;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+}
+
+.full-screen-layout {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    overflow: hidden;
+}
+
+.section > .wrapper {
+    margin: 0 auto;
+}

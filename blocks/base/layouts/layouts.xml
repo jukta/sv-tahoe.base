@@ -1,0 +1,61 @@
+<sv:root xmlns:sv="http://svsoft.net/tahoe/schema">
+
+    <sv:block name="cell">
+        <sv:set name="class" value="" override="false"/>
+        <div class="cell ${class}">
+            <sv:def/>
+        </div>
+    </sv:block>
+
+    <sv:block name="hor-layout">
+        <sv:set name="class" value="" override="false"/>
+        <div class="hor-layout ${class}">
+            <sv:def/>
+        </div>
+    </sv:block>
+
+    <sv:block name="justify-layout">
+        <sv:set name="class" value="" override="false"/>
+        <div class="justify-layout ${class}">
+            <sv:def/>
+        </div>
+    </sv:block>
+
+    <sv:block name="ver-layout">
+        <sv:set name="class" value="" override="false"/>
+        <div class="ver-layout ${class}">
+            <sv:def/>
+        </div>
+    </sv:block>
+
+    <sv:block name="grid-layout">
+        <sv:set name="class" value="" override="false"/>
+        <div class="grid-layout ${class}" sv-controller="grid-layout" cols="${cols}">
+            <sv:def/>
+        </div>
+    </sv:block>
+    
+    <sv:block name="full-screen-layout">
+        <sv:set name="class" value="" override="false"/>
+        <div class="full-screen-layout ${class}">
+            <sv:def/>
+        </div>
+    </sv:block>
+
+    <sv:block name="box">
+        <sv:set name="class" value="" override="false"/>
+        <div class="box ${class}">
+            <sv:def/>
+        </div>
+    </sv:block>
+
+    <sv:block name="section">
+        <sv:set name="class" value="" override="false"/>
+        <div class="section ${class}">
+            <div class="wrapper">
+                <sv:def/>
+            </div>
+        </div>
+    </sv:block>
+
+</sv:root>

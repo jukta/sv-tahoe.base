@@ -1,0 +1,11 @@
+{
+  "name": "sv-tahoe.base",
+  "version": "0.0.1",
+  "description": "Base package for sv-tahoe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}

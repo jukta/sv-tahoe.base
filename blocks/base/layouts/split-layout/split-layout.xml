@@ -1,0 +1,13 @@
+<sv:root xmlns:sv="http://svsoft.net/tahoe/schema" xmlns="http://www.w3.org/1999/xhtml">
+    <sv:block name="split">
+        <div class="split" sv-controller="split">
+            <div class="leftPanel">
+                <sv:def name="left"/>
+            </div>
+            <div class="split-g"></div>
+            <div class="rightPanel">
+                <sv:def name="right"/>
+            </div>
+        </div>
+    </sv:block>
+</sv:root>

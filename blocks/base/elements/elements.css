@@ -1,0 +1,36 @@
+.button {
+    background: silver;
+    border: none;
+}
+.button.link {
+    white-space: nowrap;
+    word-wrap: normal;
+    text-decoration: underline;
+    background: transparent;
+}
+.button.disabled {
+    cursor: not-allowed;
+}
+.textarea > div {
+    position: relative;
+}
+.textarea placeholder {
+    position: absolute;
+}
+.input.error,
+.textarea.error > div {
+    border: 1px solid red;
+}
+.textarea > div {
+    border: 1px solid #A9A9A9;
+}
+
+.textarea > div {
+    min-width: 10em;
+}
+.textarea > div:hover {
+}
+.textarea > div:focus,
+.textarea > div:active {
+    border: 1px solid #7A9CD3;
+}

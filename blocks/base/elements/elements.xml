@@ -1,0 +1,96 @@
+<sv:root xmlns:sv="http://svsoft.net/tahoe/schema">
+
+    <sv:block name="button">
+        <sv:doc>
+            <sv:param name="id">Identifier which sent as click event to parent controller (sv-click)</sv:param>
+            <sv:param name="class">Extra class name</sv:param>
+            Simple button. Supports link modifier.
+        </sv:doc>
+        <sv:set name="class" value="" override="false"/>
+        <button class="button ${class}" sv-click="${id}"><sv:def>Submit</sv:def></button>
+    </sv:block>
+
+    <sv:block name="input">
+        <sv:set name="class" value="" override="false"/>
+        <sv:set name="placeholder" value="" override="false"/>
+        <input name="${iName}" type="text" class="input ${class}" placeholder="${placeholder}"></input>
+    </sv:block>
+
+    <sv:block name="password">
+        <sv:set name="class" value="" override="false"/>
+        <sv:set name="placeholder" value="" override="false"/>
+        <input name="${iName}" type="password" class="input ${class}" placeholder="${placeholder}"></input>
+    </sv:block>
+
+    <sv:block name="textarea">
+        <sv:set name="placeholder" value="" override="false"/>
+        <div class="textarea ${class}" sv-controller="textarea">
+            <placeholder>${placeholder}</placeholder>
+            <div contenteditable="true"><sv:def/></div>
+        </div>
+    </sv:block>
+
+    <sv:block name="checkbox">
+        <sv:set name="class" value="" override="false"/>
+        <sv:set name="id" value="" override="false"/>
+        <label for="${id}" sv-click="${id}">
+            <input id="${id}" type="checkbox" class="checkbox ${class}"/>
+            <sv:def/>
+        </label>
+    </sv:block>
+
+    <sv:block name="select">
+        <sv:set name="class" value="" override="false"/>
+        <select class="${class}" sv-controller="select" sel="${selected}">
+            <sv:def/>
+        </select>
+    </sv:block>
+
+    <sv:block name="option">
+        <option value="${value}"><sv:def/></option>
+    </sv:block>
+
+    <sv:block name="radio-group">
+        <sv:set name="class" value="" override="false"/>
+        <sv:def/>
+    </sv:block>
+
+    <sv:block name="radio">
+        <sv:set name="class" value="" override="false"/>
+        <label for="${id}">
+            <input id="${id}" name="${Name}" value="${value}" type="radio" class="radio ${class}"/>
+            <sv:def/>
+        </label>
+    </sv:block>
+
+    <sv:block name="fieldset">
+        <sv:set name="class" value="" override="false"/>
+        <fieldset class="fieldset ${class}">
+            <legend>${legend}</legend>
+            <sv:def/>
+        </fieldset>
+    </sv:block>
+
+    <sv:block name="doctype">
+        <sv:tag name="!DOCTYPE html"/>
+    </sv:block>
+
+    <sv:block name="html">
+        <sv:tag name="html">
+            <sv:if exp="${manifest}">
+                <sv:tagAttr name="manifest" value="${manifest}"/>
+            </sv:if>
+            <sv:if exp="${class}">
+                <sv:tagAttr name="class" value="${class}"/>
+            </sv:if>
+        </sv:tag>
+        <head lang="ru">
+            <sv:def name="head"/>
+        </head>
+        <body class="${bodyClass}">
+            <sv:def name="body"/>
+        </body>
+        <sv:closeTag name="html"/>
+    </sv:block>
+
+</sv:root>

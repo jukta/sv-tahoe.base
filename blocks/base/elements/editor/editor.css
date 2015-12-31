@@ -1,0 +1,32 @@
+.editor {
+    position: relative;
+}
+.editor .edit-area {
+    word-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-modify: read-write;
+}
+.editor placeholder {
+    position: absolute;
+}
+
+.editor .tool-bar {
+    position: absolute;
+    top: 0;
+    left: -1.4em;
+    width: 1.4em;
+}
+
+.editor .tool-bar .button {
+    cursor: pointer;
+}
+
+.editor .tool-bar .button {
+    padding: 0;
+    width: 1.4em;
+    height: 1.4em;
+}
+
+.editor .edit-area {
+    min-height: 7em;
+}

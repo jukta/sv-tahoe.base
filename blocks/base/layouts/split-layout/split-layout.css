@@ -1,0 +1,25 @@
+.split {
+    position: relative;
+    min-height: 5em;
+}
+.split .leftPanel,
+.split .rightPanel {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    overflow-y: auto;
+}
+.split .leftPanel {
+    left: 0;
+}
+.split .rightPanel {
+    right: 0;
+}
+.split .split-g {
+    z-index: 200;
+    width: 8px;
+    height: 100%;
+    cursor: col-resize;
+    position: absolute;
+    margin-left: -4px;
+}
