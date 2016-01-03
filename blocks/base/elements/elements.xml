@@ -29,20 +29,34 @@
         <sv:set name="class" value="" override="false"/>
         <sv:set name="id" value="" override="false"/>
         <label for="${id}" sv-click="${id}">
-            <input id="${id}" type="checkbox" class="checkbox ${class}"/>
+            <sv:tag name="input">
+                <sv:tagAttr name="id" value="${id}"/>
+                <sv:tagAttr name="type" value="checkbox"/>
+                <sv:tagAttr name="class" value="checkbox ${class}"/>
+                <sv:if exp="${checked &amp;&amp; checked=='true'}">
+                    <sv:tagAttr name="checked"/>
+                </sv:if>
+            </sv:tag>
             <sv:def/>
         </label>
     </sv:block>
 
     <sv:block name="select">
         <sv:set name="class" value="" override="false"/>
-        <select class="${class}" sv-controller="select" sel="${selected}">
+        <select class="${class}">
             <sv:def/>
         </select>
     </sv:block>
 
     <sv:block name="option">
-        <option value="${value}"><sv:def/></option>
+        <sv:tag name="option">
+            <sv:tagAttr name="value" value="${value}"/>
+            <sv:if exp="${selected &amp;&amp; selected=='true'}">
+                <sv:tagAttr name="selected"/>
+            </sv:if>
+        </sv:tag>
+        <sv:def/>
+        <sv:closeTag name="option"/>
     </sv:block>
 
     <sv:block name="radio-group">
@@ -53,13 +67,23 @@
     <sv:block name="radio">
         <sv:set name="class" value="" override="false"/>
         <label for="${id}">
-            <input id="${id}" name="${Name}" value="${value}" type="radio" class="radio ${class}"/>
+            <sv:tag name="input">
+                <sv:tagAttr name="id" value="${id}"/>
+                <sv:tagAttr name="type" value="radio"/>
+                <sv:tagAttr name="name" value="${group}"/>
+                <sv:tagAttr name="value" value="${value}"/>
+                <sv:tagAttr name="class" value="radio ${class}"/>
+                <sv:if exp="${checked &amp;&amp; checked=='true'}">
+                    <sv:tagAttr name="checked"/>
+                </sv:if>
+            </sv:tag>
             <sv:def/>
         </label>
     </sv:block>
 
     <sv:block name="fieldset">
         <sv:set name="class" value="" override="false"/>
+        <sv:set name="legend" value="" override="false"/>
         <fieldset class="fieldset ${class}">
             <legend>${legend}</legend>
             <sv:def/>
@@ -82,6 +106,7 @@
         <head lang="ru">
             <sv:def name="head"/>
         </head>
+        <sv:set name="bodyClass" value="" override="false"/>
         <body class="${bodyClass}">
             <sv:def name="body"/>
         </body>

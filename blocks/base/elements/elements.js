@@ -10,8 +10,3 @@ SV.controller('textarea', function(el) {
     });
 
 });
-
-SV.controller('select', function(el) {
-    var op = $(el).attr("sel");
-    if (op) $(el).find("option[value='" + op + "']").attr("selected", "");
-});
