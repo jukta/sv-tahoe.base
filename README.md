@@ -27,9 +27,22 @@ Blocks
 ------------
 
 1. [base/elements] (#base/elements)
-    1. [button] (#button)
-    2. [input] (#input)
+    - [button] (#button)
+    - [input] (#input)
+    - [password] (#password)
+    - [textarea] (#textarea)
+    - [checkbox] (#checkbox)
+    - [select / option] (#select--option)
+    - [radio] (#radio)
+    - [fieldset] (#fieldset)
+    - [doctype] (#doctype)
+    - [html] (#html)
 2. [base/layouts] (#base/layouts)
+    - [cell] (#cell)
+    - [hor-layout] (#hor-layout)
+    - [justify-layout] (#justify-layout)
+    - [ver-layout] (#ver-layout)
+    - [grid-layout] (#grid-layout)
 
 ## base/elements
 
@@ -137,7 +150,7 @@ Translate to html5 doctype
 
     <sv:import file="base/layouts" prefix="bl"/>
     
-#### Common modifier classes:
+**Common modifier classes:**
 
 - **margin** - standard margin
 - **margin-v** - standard vertical margin
