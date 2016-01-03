@@ -26,7 +26,7 @@ Dependencies
 Blocks
 ------------
 
-1. [base/elements] (#base/elements)
+1. [base/elements] (#baseelements)
     - [button] (#button)
     - [input] (#input)
     - [password] (#password)
@@ -37,7 +37,7 @@ Blocks
     - [fieldset] (#fieldset)
     - [doctype] (#doctype)
     - [html] (#html)
-2. [base/layouts] (#base/layouts)
+2. [base/layouts] (#baselayouts)
     - [cell] (#cell)
     - [hor-layout] (#hor-layout)
     - [justify-layout] (#justify-layout)
