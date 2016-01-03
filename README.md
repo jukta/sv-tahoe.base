@@ -26,6 +26,11 @@ Dependencies
 Blocks
 ------------
 
+1. [base/elements] (#base/elements)
+    1. [button] (#button)
+    2. [input] (#input)
+2. [base/layouts] (#base/layouts)
+
 ## base/elements
 
     <sv:import file="base/elements" prefix="be"/>
@@ -109,10 +114,10 @@ Blocks
 
 ### doctype
 
-    <be:doctype/>
-    
 Translate to html5 doctype
 
+    <be:doctype/>
+    
 ### html
 
     <be:html class="htmlClass" bodyClass="bodyClass" manifest="manifestLink">
@@ -127,3 +132,99 @@ Translate to html5 doctype
 - **class** - custom css class for html tag ( __optional__ )
 - **bodyClass** - custom css class for body tag ( __optional__ )
 - **manifest** - html manifest link ( __optional__ )
+
+## base/layouts
+
+    <sv:import file="base/layouts" prefix="bl"/>
+    
+#### Common modifier classes:
+
+- **margin** - standard margin
+- **margin-v** - standard vertical margin
+- **margin-h** - standard horizontal margin
+- **padding** - standard padding
+- **padding-v** - standard vertical padding
+- **padding-h** - standard horizontal padding    
+- **full-width** - 100% width
+- **full-height** - 100% height
+- **full-size** - 100% size
+
+### cell
+
+Wrapper element used as cell in layouts
+
+    <bl:cell class="customClass">
+        set of fields
+    <bl:cell/>
+
+- **class** - custom css class ( __optional__ )
+
+### hor-layout
+
+Position child cells horizontally
+
+    <bl:hor-layout class="customClass spacing padding margin">
+        <bl:cell>
+            ...
+        </bl:cell>
+        <bl:cell>
+            ...
+        </bl:cell>
+    <bl:hor-layout/>
+
+- **class** - one or more custom css class ( __optional__ )
+
+Modifier classes:
+
+- **spacing** - add spacing between cells
+
+### justify-layout
+
+Justify spaces of child cells positioned horizontally
+
+    <bl:justify-layout class="customClass">
+        <bl:cell>
+            ...
+        </bl:cell>
+        <bl:cell>
+            ...
+        </bl:cell>
+    <bl:justify-layout/>
+
+- **class** - one or more custom css class ( __optional__ )
+
+### ver-layout
+
+Position child cells vertically
+
+    <bl:ver-layout class="customClass spacing">
+        <bl:cell>
+            ...
+        </bl:cell>
+        <bl:cell>
+            ...
+        </bl:cell>
+    <bl:ver-layout/>
+
+- **class** - one or more custom css class ( __optional__ )
+
+Modifier classes:
+
+- **spacing** - add spacing between cells
+
+### grid-layout
+
+Position child cells to table with specified number of columns 
+
+    <bl:grid-layout class="customClass" cols="3">
+        <bl:cell>
+            ...
+        </bl:cell>
+        <bl:cell>
+            ...
+        </bl:cell>
+        ...
+    <bl:grid-layout/>
+    
+- **class** - one or more custom css class ( __optional__ )
+- **cols** - number of columns ( __optional__ ) default: __1__

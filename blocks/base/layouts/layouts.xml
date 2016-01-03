@@ -30,6 +30,7 @@
 
     <sv:block name="grid-layout">
         <sv:set name="class" value="" override="false"/>
+        <sv:set name="cols" value="1" override="false"/>
         <div class="grid-layout ${class}" sv-controller="grid-layout" cols="${cols}">
             <sv:def/>
         </div>
