@@ -27,12 +27,9 @@
 
     <sv:block name="checkbox">
         <sv:set name="class" value="" override="false"/>
-        <sv:set name="id" value="" override="false"/>
-        <label for="${id}" sv-click="${id}">
+        <label class="checkbox ${class}">
             <sv:tag name="input">
-                <sv:tagAttr name="id" value="${id}"/>
                 <sv:tagAttr name="type" value="checkbox"/>
-                <sv:tagAttr name="class" value="checkbox ${class}"/>
                 <sv:if exp="${checked &amp;&amp; checked=='true'}">
                     <sv:tagAttr name="checked"/>
                 </sv:if>
@@ -66,13 +63,11 @@
 
     <sv:block name="radio">
         <sv:set name="class" value="" override="false"/>
-        <label for="${id}">
+        <label class="radio ${class}">
             <sv:tag name="input">
-                <sv:tagAttr name="id" value="${id}"/>
                 <sv:tagAttr name="type" value="radio"/>
                 <sv:tagAttr name="name" value="${group}"/>
                 <sv:tagAttr name="value" value="${value}"/>
-                <sv:tagAttr name="class" value="radio ${class}"/>
                 <sv:if exp="${checked &amp;&amp; checked=='true'}">
                     <sv:tagAttr name="checked"/>
                 </sv:if>

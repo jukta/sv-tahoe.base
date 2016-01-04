@@ -106,11 +106,10 @@ Blocks
 
 ### radio
 
-    <be:radio id="radioId1" group="group1" value="val1" class="customClass">label for val1</be:option>
-    <be:radio id="radioId2" group="group1" value="val2" checked="true">label for val1</be:option>
-    <be:radio id="radioId3" group="group1" value="val3">label for val1</be:option>
+    <be:radio group="group1" value="val1" class="customClass">label for val1</be:option>
+    <be:radio group="group1" value="val2" checked="true">label for val1</be:option>
+    <be:radio group="group1" value="val3">label for val1</be:option>
 
-- **id** - element id ( __required__ )
 - **group** - radio group name ( __required__ )
 - **value** - radio value ( __required__ )
 - **class** - custom css class ( __optional__ )
