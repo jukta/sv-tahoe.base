@@ -84,11 +84,10 @@ Blocks
 
 ### checkbox
 
-    <be:checkbox id="checkboxId" class="customClass" checked="true">
+    <be:checkbox class="customClass" checked="true">
         label text here
     <be:checkbox/>
 
-- **id** - element id ( __required__ )
 - **class** - custom css class ( __optional__ )
 - **checked** - checked ( __optional__ ) default: __false__
 
