@@ -1,6 +1,7 @@
 .button {
     background: silver;
     border: none;
+    cursor: pointer;
 }
 .button.link {
     white-space: nowrap;
