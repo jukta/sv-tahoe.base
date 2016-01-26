@@ -40,9 +40,11 @@
 
     <sv:block name="select">
         <sv:set name="class" value="" override="false"/>
-        <select class="${class}">
-            <sv:def/>
-        </select>
+        <label class="select-group">
+            <select class="${class}">
+                <sv:def/>
+            </select>
+        </label>
     </sv:block>
 
     <sv:block name="option">
