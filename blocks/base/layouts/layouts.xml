@@ -59,4 +59,11 @@
         </div>
     </sv:block>
 
+    <sv:block name="h-layout">
+        <sv:set name="class" value="" override="false"/>
+        <div class="h-layout ${class}">
+            <sv:def/>
+        </div>
+    </sv:block>
+
 </sv:root>

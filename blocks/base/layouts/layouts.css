@@ -95,10 +95,28 @@
     outline: none;
     overflow: hidden;
 }
+.h-layout {
+    display: table;
+}
+
+.h-layout.free > *,
+.h-layout > .cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.h-layout.spacing > .cell {
+    padding-right: 1em;
+}
+.h-layout.spacing > .cell:last-child,
+.h-layout.spacing > .cell:only-child {
+    padding-right: 0;
+}
 
 .section > .wrapper {
     margin: 0 auto;
 }
+
 .lt{text-align:left;vertical-align:top;}
 .lm{text-align:left;vertical-align:middle;justify-content:flex-start;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;}
 .lb{text-align:left;vertical-align:bottom;justify-content:flex-start;}
